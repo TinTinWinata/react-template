@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
-import { useUserAuth } from "../hooks/UserContext";
-import Detail from "../pages/detail";
+import { useEffect } from 'react';
+import { Route, Routes, useNavigate } from 'react-router-dom';
+import { useUserAuth } from '../contexts/user-context';
+import Detail from '../pages/detail-page';
 
 export default function MiddlewareRoutes() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function MiddlewareRoutes() {
   useEffect(() => {
     if (!isAuth()) {
       // If not auth then go to '/' (login page at routes)
-      navigate("/");
+      navigate('/');
     }
 
     // --------------------------------

@@ -1,9 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { UserProvider } from "./hooks/UserContext";
-import MainLayout from "./layouts/layout";
-import MiddlewareRoutes from "./middlewares/MiddlewareRoutes";
-import Home from "./pages/home";
-import Login from "./pages/login";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { UserProvider } from './contexts/user-context';
+import MainLayout from './layouts/layout';
+import MiddlewareRoutes from './middlewares/middleware-route';
+import Home from './pages/home-page';
+import Login from './pages/login-page';
 
 function App() {
   return (
